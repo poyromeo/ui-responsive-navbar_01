@@ -1,0 +1,146 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none !important;
+}
+html {
+  scroll-behavior: smooth;
+}
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.2rem;
+  font-weight: bold;
+}
+nav {
+  background-color: #0c2340 !important;
+}
+
+button {
+  width: 60px;
+}
+
+.vr {
+  border-left: 2px solid #ccc;
+  height: 10px;
+  display: block;
+  align-self: center;
+}
+
+.container-right ul {
+  padding: 0;
+  margin: 0;
+}
+
+.container-right li {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.search-box {
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
+.menu-btn {
+  font-size: 37px;
+  cursor: pointer;
+  display: none;
+  color: #fff;
+}
+
+.exit-btn {
+  display: none;
+  cursor: pointer;
+  font-size: 27px;
+  color: #fff;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+.title a {
+  color: #fff !important;
+}
+.title a {
+  transition: all 0.2s ease;
+}
+
+.title a:hover {
+  color: tomato !important;
+}
+
+@media only screen and (max-width: 1310px) {
+  .search-box {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  .container-right {
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: #0c2340;
+    color: #fff;
+    height: 100vh;
+    width: 0px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.25s ease-in;
+  }
+  .vr {
+    display: none;
+  }
+  .title a {
+    color: #fff !important;
+  }
+  .container-right ul {
+    flex-direction: column;
+    align-items: flex-start !important;
+    padding: 20px;
+  }
+  .container-right.active {
+    visibility: visible;
+    opacity: 1;
+    width: 250px;
+  }
+  .menu-btn {
+    display: block;
+  }
+  .exit-btn {
+    display: block;
+    padding: 17px;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .search-box {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
